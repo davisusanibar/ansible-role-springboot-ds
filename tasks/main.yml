@@ -1,2 +1,9 @@
 ---
 # tasks file for /home/peruhackaton/dsusanibar/git/ansible/ansible-role-springboot-ds
+- name: gvm | Install gvm prerequisites for Grails
+  shell: curl -s get.gvmtool.net | bash executable: /bin/bash
+  sudo: no
+
+- name: install springboot
+  command: gvm install springboot
+  sudo: no  
